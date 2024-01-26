@@ -750,6 +750,230 @@
             var visibleSections = JSON.parse(JSON.stringify('["our_story","functions","travel","photo_gallery","rsvp"]'));
             var registry_products = [];
         </script>
+        <style>@font-face {
+            font-family: 'FontContent';
+            src: url('../../font/fonts/InknutAntiqua-SemiBold.ttf');
+        }
+        
+        :root {
+            --text-color-1: #e8cc53;
+            --text-color-2: #C89F30;
+            --text-color-3: #757575;
+            --img-border-color: #a8701b;
+            --nav-bg-color: #9E0B1D;
+            --nav-collapse-color: #ffffff;
+            --nav-border-color: rgba(0, 0, 0, 0.1);
+            --nav-font-color: #e8cc53;
+            --footer-bg-color: #9E0B1D;
+            --couple-name-font-size: 40px;
+            --rsvp-submit-color: #ffffff;
+            --rsvp-placeholder-color: #ffffff;
+            --wedding-content-font-size: 20px;
+            --event-desc-bg: #ffffff;
+            --time-line-divider: #9E0B1D;
+            --virtual-button-color: #e8cc53;
+            --count-down-bg: #ffaeae1f;
+            --couple-name-font: 'FontContent';
+            --date-venue-font: 'FontContent', sans-serif;
+            --section-title-font: 'FontContent';
+            --our-story-font: roboto;
+            --event-title-font: "FontContent", serif;
+            --section-content-font: 'FontContent', sans-serif;
+            --section-content-font-2: 'FontContent', sans-serif;
+            --rsvp-background-color: #c2e0dc;
+            --rsvp-checkbox-color: #ffffff;
+            --guestbook-color: #9e0b1d;
+            --guestbook-background-color: #9e0b1d;
+            --rsvp-background-color: #e8cc53;
+            --time-line-dot: url("../../images/dot/dot-4.png");
+            --body-background: url('../../images/background/background-4.png');
+            --banner-image: url('../../images/family/couple.jpeg');
+            --divider-image: url('../../images/divider/divider-img-4.png');
+            --frame-left-top: url("../../images/frames/c89f30/left-top.png");
+            --frame-right-top: url("../../images/frames/c89f30/right-top.png");
+            --frame-left-bottom: url("../../images/frames/c89f30/left-bottom.png");
+            --frame-right-bottom: url("../../images/frames/c89f30/right-bottom.png");
+            --rsvp-frame-left-top: url("../../images/frames/ffffff/left-top.png");
+            --rsvp-frame-right-top: url("../../images/frames/ffffff/right-top.png");
+            --rsvp-frame-left-bottom: url("../../images/frames/ffffff/left-bottom.png");
+            --rsvp-frame-right-bottom: url("../../images/frames/ffffff/right-bottom.png");
+            --guestbk-frame-left-top: url("../../images/frames/ffffff/left-top.png");
+            --guestbk-frame-right-top: url("../../images/frames/ffffff/right-top.png");
+            --guestbk-frame-left-bottom: url("../../images/frames/ffffff/left-bottom.png");
+            --guestbk-frame-right-bottom: url("../../images/frames/ffffff/right-bottom.png");
+            --guestbk-frame-right-bottom: url("../../images/frames/ffffff/right-bottom.png");
+        }
+        
+        .alert-banner {
+            color: #c89f30;
+        }
+        </style>
+        <style>
+            .body-background {
+    background-repeat: repeat !important;
+    background: var(--body-background);
+    background-size: auto !important;
+    background-color: #fff;
+}
+
+#header-logo {
+    max-width: 100% !important;
+}
+
+h1.couple-name,
+.footer-name {
+    text-transform: capitalize !important;
+    font-weight: 400;
+}
+
+.footer-name {
+    font-size: 40px !important;
+}
+
+.footer-date {
+    font-size: 18px !important;
+}
+
+.countdown-section,
+.thanks-banner {
+    color: var(--nav-bg-color);
+}
+
+.today-banner .button-section>.btn {
+    color: var(--nav-bg-color);
+    border-color: var(--nav-bg-color);
+}
+
+.arrow-cls {
+    background: var(--nav-bg-color) !important;
+    color: #ffffff !important;
+}
+
+.css-shape:after {
+    border-left: 15px solid var(--nav-bg-color) !important;
+}
+
+.css-shape:before {
+    border-right: 15px solid var(--nav-bg-color) !important;
+}
+
+.ourstory-all-sections p {
+    color: #757575 !important;
+}
+
+.ww-nav .nav-item .nav-link:hover {
+    font-weight: 600 !important;
+}
+
+.wedding-content {
+    padding: 16px 25px !important;
+}
+
+.wedding-date,
+.wedding-venue {
+    letter-spacing: 1px;
+    line-height: 1.4 !important;
+}
+
+.section-title {
+    padding: 0px 15px 22px 15px !important;
+    margin-bottom: 30px !important;
+    line-height: 1 !important;
+}
+
+.event-description-container {
+    border: 2px solid #a8701b !important;
+}
+
+/* .bottom-countdown .countdown-banner .timer {
+      font-size: 60px !important;
+      color: #FABB38 !important;
+  } */
+.bottom-countdown .countdown-value .title {
+    color: #757575 !important;
+}
+
+.line {
+    border-top: 1px solid transparent;
+}
+
+.footer-name,
+.footer-date {
+    color: #fce2cb !important;
+    text-transform: uppercase !important;
+}
+
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+::placeholder {
+    color: #414445 !important;
+}
+
+.function-name {
+    color: var(--text-color-1) !important;
+}
+
+@media screen and (min-width:1200px) {
+    li.nav-item {
+        padding: 0 10px 34px;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    li.nav-item {
+        padding: 0 10px 34px;
+    }
+
+    #header-logo {
+        top: 10px !important;
+        width: 150px !important;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    li.nav-item {
+        padding: 0 5px 34px;
+    }
+
+    #header-logo {
+        top: 20px !important;
+        width: 100px !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+    #header-logo {
+        max-width: 150px !important;
+    }
+
+    li.nav-item {
+        border-bottom: 1px solid var(--nav-border-color) !important;
+    }
+
+    .footer-logo {
+        max-width: 45% !important;
+    }
+}
+
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
+    .footer-name {
+        font-size: 28px !important;
+    }
+}
+
+@media only screen and (device-width : 375px) and (device-height : 667px) and (-webkit-device-pixel-ratio : 2) {
+    .footer-name {
+        font-size: 28px !important;
+    }
+}
+
+@media only screen and (device-width : 414px) and (device-height : 736px) and (-webkit-device-pixel-ratio : 3) {
+    .footer-name {
+        font-size: 28px !important;
+    }
+}
+
+        </style>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Roboto+Slab:wght@300;400;600;700&family=Roboto:wght@300;400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
 
