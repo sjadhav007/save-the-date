@@ -576,10 +576,6 @@
             </div>
         </footer>
         <style>
-            footer#footer {
-                margin-bottom: 95px;
-            }
-
             .bottom-selector {
                 position: fixed;
                 bottom: 0;
@@ -624,10 +620,6 @@
                 .bottom-selector .button:first-child {
                     margin-bottom: 1rem;
                 }
-
-                footer#footer {
-                    margin-bottom: 155px;
-                }
             }
         </style>
         <script type="text/javascript" src='https://maps.google.com/maps/api/js?key=AIzaSyCnGhL_3q7KRiHNvBLWqezkFczwWe4Bv8g'></script>
@@ -635,15 +627,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript">
             var password = false
-              , base_url = 'https://www.weddingwishlist.com/'
               , pref_url = '/api/'
               , prod_url = '/api/'
               , guest_url = '/api/'
-              , rsvp_url = 'https://www.weddingwishlist.com/rsvp/'
               , regurl = ''
               , siteTheme = 'theme4'
               , layout = '1'
-              , asset_url = 'https://cdn.weddingwishlist.com/'
               , loggedIn = false
               , tata_user_id = ''
               , registry_url = ''
@@ -655,87 +644,7 @@
               , productId = '497'
               , pwa = 0
               , eventDate = 1712428200000
-              , mapLinks = JSON.parse(JSON.stringify({
-                "map_0": {
-                    "lon": "72.8969108",
-                    "lat": "19.0949235",
-                    "addr": "Mumbai, Maharashtra 400084, India"
-                },
-                "map_2": {
-                    "lon": "72.82086919999999",
-                    "lat": "18.9146672",
-                    "addr": "Mumbai, Maharashtra 400005, India"
-                }
-            }))
-              , visible_sec = JSON.parse(JSON.stringify(["our_story", "functions", "travel", "photo_gallery", "rsvp"]));
-            var rsvpSection = JSON.parse(JSON.stringify({
-                "type": "rsvp",
-                "title": "RSVP",
-                "guest_details": {
-                    "show": "yes",
-                    "visible_options": ["Name", "Email", "Phone"],
-                    "options": ["Name", "Email", "Phone"]
-                },
-                "guest_message": {
-                    "show": "yes",
-                    "visible_options": ["text", "photo", "video", "audio"],
-                    "options": ["text", "photo", "audio", "video"]
-                },
-                "attending_status": {
-                    "show": "yes",
-                    "visible_options": ["attending", "virtual", "not_sure", "not_attending"],
-                    "options": {
-                        "attending": " Yes. I'll be there in person",
-                        "virtual": "I'll attend virtually",
-                        "not_attending": " No. I can't attend",
-                        "not_sure": "I'm not sure"
-                    }
-                },
-                "no_of_guests": "yes",
-                "arrival_departure_details": {
-                    "show": "yes",
-                    "visible_options": ["arrival_date", "arrival_details", "departure_date", "departure_details"],
-                    "options": ["arrival_date", "arrival_mode", "arrival_details", "departure_date", "departure_mode", "departure_details"]
-                },
-                "accomodation_details": {
-                    "show": "no",
-                    "visible_options": ["needed", "not_needed"],
-                    "options": {
-                        "needed": " Yes. I need Accommodation",
-                        "not_needed": "No, I'm good"
-                    }
-                },
-                "meal_preference": {
-                    "show": "no",
-                    "visible_options": ["option_1", "option_2", "option_3"],
-                    "options": {
-                        "option_1": "Vegetarian",
-                        "option_2": "Non Vegetarian",
-                        "option_3": "Vegan",
-                        "option_4": "Eggetarian"
-                    }
-                },
-                "allergic": {
-                    "show": "no",
-                    "visible_options": ["option_1", "option_2", "option_3", "other"],
-                    "options": {
-                        "option_1": "Cheese",
-                        "option_2": "Soy",
-                        "option_3": "Fish",
-                        "other": "Other"
-                    }
-                },
-                "main_course": {
-                    "show": "no",
-                    "visible_options": ["option_1", "option_2", "option_3"],
-                    "options": {
-                        "option_1": "North Indian Thali",
-                        "option_2": "South Indian Thali",
-                        "option_3": "Balinese Curry (Tofu)",
-                        "option_4": "Thai Green Curry"
-                    }
-                }
-            }));
+              , visible_sec = JSON.parse(JSON.stringify(["our_story", "functions", "travel", "photo_gallery"]));
             var registry_products = [];
             window.localStorage.setItem('website_url', regurl);
             function customVirtualWeddingSection() {}
@@ -747,7 +656,7 @@
         <script type="text/javascript" src="/scripts/website/product_view.js"></script>
         <script>
             var websiteId = "";
-            var visibleSections = JSON.parse(JSON.stringify('["our_story","functions","travel","photo_gallery","rsvp"]'));
+            var visibleSections = JSON.parse(JSON.stringify('["our_story","functions","travel","photo_gallery"]'));
             var registry_products = [];
         </script>
     </body>
